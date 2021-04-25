@@ -18,6 +18,12 @@
       </div>
       <h1>PIZZA DELI</h1>
     </div>
+    <div class="About">
+      <h2>ABOUT US</h2>
+      <p>We aim to not only make your pizza experience delicious but also memorable with our great customer service and friendly ambiance.</p>
+      <p>Enjoy our <strong>Funky Furahiday</strong> offer where you get <em>two large</em> pizzas for the price of one. We also offer delivery services at an additional fee of sh.200 </p>
+      <p>Our prices range from sh.600 for regular, sh.800 for medium to sh.1000 for large. Visit us today for the ultimate pizza experience!</p>
+    </div>
     <div class="slideshow-container">
       <div class="mySlides">
         <img src="images/capricciosa.jpg" alt="capricciosa" class="images">
@@ -25,29 +31,68 @@
       </div>
       <div class="mySlides">
         <img src="images/hawaiian.jpeg" alt="hawaiian" class="images">
-        <h4>Pizza Hawaiian</h4>
+        <h4>Hawaiian</h4>
       </div>
       <div class="mySlides">
-        <img src="images/marinara.jpg" alt="marinara" class="images">
-        <h4>Pizza Marinara</h4>
-      </div>
-      <div class="mySlidePizza Hawaiians">
-        <img src="images/pugliese.jpg" alt="pugliese" class="images">
-        <h4>Pizza Pugliese</h4>
+        <img src="images/marinara.jpg" alt="Boerewors" class="images">
+        <h4>Boerewors</h4>
       </div>
       <div class="mySlides">
-        <img src="images/spicy-chicken.jpg" alt="spicy-chicken" class="images">
-        <h4>Spicy-Chicken</h4>
+        <img src="images/pugliese.jpg" alt="bbq-steak" class="images">
+        <h4>BBQ Steak</h4>
       </div>
       <div class="mySlides">
-        <img src="images/vegetariana.jpg" alt="vegetariana" class="images">
-        <h4>Pizza Vegeteriana</h4>
+        <img src="images/spicy-chicken.jpg" alt="chicken-hawaiian" class="images">
+        <h4>Chicken Hawaiian</h4>
+      </div>
+      <div class="mySlides">
+        <img src="images/vegetariana.jpg" alt="veg-feast" class="images">
+        <h4>Veg Feast</h4>
+      </div>
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
     </div>
-    <form action="">
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000);
+      }
+    </script>
+    
+    <div class="Services">
+     <h5> Our pizzas come in two categories:</h5>
+     <ul>
+       <li>Deluxe Pizza</li>
+       <li>Classic Pizza</li>
+     </ul>
+    </div>
+    <form>
       <div class="form-group">
         <label for="sel1">Deluxe Pizza:</label>
-        <select class="form-control" id="sel1">
+        <select class="form-control" id="deluxe">
           <option>Meat Deluxe</option>
           <option>Chicken Hawaiian</option>
           <option>Veg Feast</option>
@@ -57,8 +102,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="sel1">Classic Pizza:</label>
-        <select class="form-control" id="sel1">
+        <label for="sel2">Classic Pizza:</label>
+        <select class="form-control" id="classic">
           <option>Peri-peri Chicken</option>
           <option>Veg Tikka</option>
           <option>BBQ Steak</option>
@@ -68,18 +113,26 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="sel1">Select Crust:</label>
-        <select class="form-control" id="sel1">
-          <option>Thick</option>
-          <option>Thin</option>
-          <option>Brooklyn style</option>
-          <option>Gluten-free</option>
-          <option>Pan</option>
+        <label for="sel3">Select Size:</label>
+        <select class="form-control" id="size" required>
+          <option value="1000">Large @ sh.1000</option>
+          <option value="800">Medium @ sh.800</option>
+          <option value="600">Regular @ sh.600</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="sel1">Select Toppings:</label>
-        <select class="form-control" id="sel1">
+        <label for="sel4">Select Crust:</label>
+        <select class="form-control" id="crust" required>
+          <option value="250">Thick @ sh.250</option>
+          <option value="200">Pan @ sh.200</option>
+          <option value="200">Brooklyn style @ sh.200</option>
+          <option value="180">Gluten-free @ sh.180</option>
+          <option value="160">Thin @ sh.160</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel5">Select Toppings:</label>
+        <select class="form-control" id="toppings">
           <option>Sausages</option>
           <option>Mince</option>
           <option>Bacon</option>
@@ -88,6 +141,12 @@
           <option>Pineapple</option>
         </select>
       </div>
+<div class="form-group">
+  <label for="sel6"></label>
+  <input class ="form-control form-group" type="text" id="numberofpizza" required>
+
+  <button type="submit" id="submit" value="Check-Out" onclick="calctotalPrice()">Submit</button>
+</div>
     </form>
   </div>
   <script src="js/jquery-3.6.0.js"></script>

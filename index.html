@@ -20,9 +20,12 @@
     </div>
     <div class="About">
       <h2>ABOUT US</h2>
-      <p>We aim to not only make your pizza experience delicious but also memorable with our great customer service and friendly ambiance.</p>
-      <p>Enjoy our <strong>Funky Furahiday</strong> offer where you get <em>two large</em> pizzas for the price of one. We also offer delivery services at an additional fee of sh.200 </p>
-      <p>Our prices range from sh.600 for regular, sh.800 for medium to sh.1000 for large. Visit us today for the ultimate pizza experience!</p>
+      <p>We aim to not only make your pizza experience delicious but also memorable with our great customer service and
+        friendly ambiance.</p>
+      <p>Enjoy our <strong>Funky Furahiday</strong> offer where you get <em>two large</em> pizzas for the price of one.
+        We also offer delivery services at an additional fee of sh.200 </p>
+      <p>Our prices range from sh.600 for regular, sh.800 for medium to sh.1000 for large. Visit us today for the
+        ultimate pizza experience!</p>
     </div>
     <div class="slideshow-container">
       <div class="mySlides">
@@ -81,17 +84,17 @@
         setTimeout(showSlides, 2000);
       }
     </script>
-    
+
     <div class="Services">
-     <h5> Our pizzas come in two categories:</h5>
-     <ul>
-       <li>Deluxe Pizza</li>
-       <li>Classic Pizza</li>
-     </ul>
+      <h3> Our pizzas come in two categories:</h3>
+      <ul>
+        <li>Deluxe Pizza</li>
+        <li>Classic Pizza</li>
+      </ul>
     </div>
     <form>
       <div class="form-group">
-        <label for="sel1">Deluxe Pizza:</label>
+        <label for="sel1">Select Deluxe Pizza:</label>
         <select class="form-control" id="deluxe">
           <option>Meat Deluxe</option>
           <option>Chicken Hawaiian</option>
@@ -102,7 +105,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="sel2">Classic Pizza:</label>
+        <label for="sel2"> Select Classic Pizza:</label>
         <select class="form-control" id="classic">
           <option>Peri-peri Chicken</option>
           <option>Veg Tikka</option>
@@ -141,13 +144,27 @@
           <option>Pineapple</option>
         </select>
       </div>
-<div class="form-group">
-  <label for="sel6"></label>
-  <input class ="form-control form-group" type="text" id="numberofpizza" required>
+      <div class="form-group">
+        <label for="sel6"></label>
+        <input class="form-control form-group" type="text" id="numberofpizza" required>
 
-  <button type="submit" id="submit" value="Check-Out" onclick="calctotalPrice()">Submit</button>
-</div>
+        <button type="submit" id="submit" value="Check-Out" onclick="calctotalPrice()">Submit</button>
+      </div>
     </form>
+    <div class="col-md-6">
+      <div id="formlocation">
+        <h4>For delivery, add location details below:</h4>
+        <form id="delivery">
+          <label for="name"></label>
+          <input type="text" class="form-control" id="name" placeholder="Name..." required>
+          <label for="location"></label>
+          <input type="text" class="form-control" id="location" placeholder="Location..." required>
+          <label for="phonenumber"></label>
+          <input type="tel" class="form-control" id="number" placeholder="Tel..." required>
+          <button type="submit" name="button" class="submit">Submit</button>
+        </form>
+      </div>
+    </div>
   </div>
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>

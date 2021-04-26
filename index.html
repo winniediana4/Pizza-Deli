@@ -87,14 +87,12 @@
 
     <div class="Services">
       <h3> Our pizzas come in two categories:</h3>
-      <ul>
-        <li>Deluxe Pizza</li>
-        <li>Classic Pizza</li>
-      </ul>
+        <p>Deluxe Pizza</p>
+        <p>Classic Pizza</p>
     </div>
-    <form>
+    <form id="form1">
       <div class="form-group">
-        <label for="sel1">Select Deluxe Pizza:</label>
+        <label for="type">Select Deluxe Pizza:</label>
         <select class="form-control" id="deluxe">
           <option>Meat Deluxe</option>
           <option>Chicken Hawaiian</option>
@@ -105,7 +103,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="sel2"> Select Classic Pizza:</label>
+        <label for="type"> Select Classic Pizza:</label>
         <select class="form-control" id="classic">
           <option>Peri-peri Chicken</option>
           <option>Veg Tikka</option>
@@ -116,15 +114,16 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="sel3">Select Size:</label>
+        <label for="size">Select Size:</label>
         <select class="form-control" id="size" required>
+          <option value="0">Select</option>
           <option value="1000">Large @ sh.1000</option>
           <option value="800">Medium @ sh.800</option>
           <option value="600">Regular @ sh.600</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="sel4">Select Crust:</label>
+        <label for="crust">Select Crust:</label>
         <select class="form-control" id="crust" required>
           <option value="250">Thick @ sh.250</option>
           <option value="200">Pan @ sh.200</option>
@@ -134,8 +133,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="sel5">Select Toppings:</label>
-        <select class="form-control" id="toppings">
+        <label for="topping">Select Toppings:</label>
+        <select class="form-control" id="topping">
           <option>Sausages</option>
           <option>Mince</option>
           <option>Bacon</option>
@@ -145,10 +144,10 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="sel6"></label>
+        <label for="form"> Add Quantity</label>
         <input class="form-control form-group" type="text" id="numberofpizza" required>
 
-        <button type="submit" class="btn btn-success" id="submit" value="Check-Out" onclick="calctotalPrice()">Submit</button>
+        <button type="submit" class="btn btn-success" id="submit" value="Check-Out" onclick="calcTotalPrice()">Order</button>
       </div>
     </form>
     <div class="col-md-6">

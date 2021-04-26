@@ -1,25 +1,25 @@
 function getSizeCost() {
-  var selectedSize = document.getElementById("size").Val;
+  var selectedSize = document.getElementById("size").value;
   console.log(selectedSize)
-  return parseInt(selectedSize)
+  return parseInt(selectedSize);
 }
 
 function getCrustCost() {
-  var selectedCrust = document.getElementById("crust").Val;
+  var selectedCrust = document.getElementById("crust").value;
   console.log(selectedCrust)
-  return parseInt(selectedCrust)
+  return parseInt(selectedCrust);
 }
 
 function getToppingCost() {
-  var selectedTopping = document.getElementById("topping").Val;
+  var selectedTopping = document.getElementById("topping").value;
   console.log(selectedTopping)
-  return parseInt(selectedTopping)
+  return parseInt(selectedTopping);
 }
 
 function getNumber() {
-  var selectedNumber = document.getElementById("numberofpizza").Val;
+  var selectedNumber = document.getElementById("numberofpizza").value;
   console.log(selectedNumber)
-  return parseInt(selectedNumber)
+  return parseInt(selectedNumber);
 }
 
 function topping() {
@@ -33,12 +33,12 @@ function topping() {
 
 function calcTotalPrice(event) {
   event.preventDefault();
-}
 
 var totalPrice = (getSizeCost() + getCrustCost() + getToppingCost()) * (getNumber());
 
-console.log(getSizeCost() + getCrustCost() + getToppingCost()) * (getNumber());
+console.log(getSizeCost(), getCrustCost(), getToppingCost(), getNumber());
 alert("Your order of " + getNumber() + " pizza has been received and will be processed shortly. Your total amount payable is " + totalPrice + ".")
+}
 
 $(document).ready(function () {
   $("#delivery").submit(function () {

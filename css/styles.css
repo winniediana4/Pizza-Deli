@@ -2,12 +2,15 @@
   box-sizing: border-box;
 }
 body{
-  text-align: center;
+  /* text-align: center; */
   background-color: blanchedalmond;
   color: black;
 }
 h1{
   color: white;
+}
+.jumbotron{
+  text-align: center;
 }
 .logo img{
   height: 150px;
@@ -16,6 +19,9 @@ h1{
   background: url(../images/spicy-chicken.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.about, .mySlides, h4{
+  text-align: center;
 }
 .images{
 height: 300px;
@@ -44,4 +50,8 @@ h4{
   font-size: 17px;
   position: absolute;
   padding: 0px 10px;
+}
+#form1{
+  background-color: rgb(233, 194, 136);
+  width: 600px;
 }

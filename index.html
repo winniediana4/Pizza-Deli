@@ -18,7 +18,7 @@
       </div>
       <h1>PIZZA DELI</h1>
     </div>
-    <div class="About">
+    <div class="about">
       <h2>ABOUT US</h2>
       <p>We aim to not only make your pizza experience delicious but also memorable with our great customer service and
         friendly ambiance.</p>
@@ -30,27 +30,27 @@
     <div class="slideshow-container">
       <div class="mySlides">
         <img src="images/capricciosa.jpg" alt="capricciosa" class="images">
-        <h4>Pizza Capricciosa</h4>
+        <h4 class="bg-info">Pizza Capricciosa</h4>
       </div>
       <div class="mySlides">
         <img src="images/hawaiian.jpeg" alt="hawaiian" class="images">
-        <h4>Hawaiian</h4>
+        <h4 class="bg-success">Hawaiian</h4>
       </div>
       <div class="mySlides">
         <img src="images/marinara.jpg" alt="Boerewors" class="images">
-        <h4>Boerewors</h4>
+        <h4 class="bg-warning">Boerewors</h4>
       </div>
       <div class="mySlides">
         <img src="images/pugliese.jpg" alt="bbq-steak" class="images">
-        <h4>BBQ Steak</h4>
+        <h4 class="bg-danger">BBQ Steak</h4>
       </div>
       <div class="mySlides">
         <img src="images/spicy-chicken.jpg" alt="chicken-hawaiian" class="images">
-        <h4>Chicken Hawaiian</h4>
+        <h4 class="bg-danger">Chicken Hawaiian</h4>
       </div>
       <div class="mySlides">
         <img src="images/vegetariana.jpg" alt="veg-feast" class="images">
-        <h4>Veg Feast</h4>
+        <h4 class="bg-danger">Veg Feast</h4>
       </div>
       <div style="text-align:center">
         <span class="dot"></span>
@@ -94,23 +94,25 @@
       <div class="form-group">
         <label for="type">Select Deluxe Pizza:</label>
         <select class="form-control" id="deluxe">
-          <option>Meat Deluxe</option>
-          <option>Chicken Hawaiian</option>
-          <option>Veg Feast</option>
-          <option>Roast Veg & Feta</option>
-          <option>Spicy Boerewors</option>
-          <option>Chicken Macon BBQ</option>
+          <option value="0">Select</option>
+          <option value="Meat Deluxe">Meat Deluxe</option>
+          <option value="Chicken Hawaiian">Chicken Hawaiian</option>
+          <option value="Veg Feast">Veg Feast</option>
+          <option value="Roast Veg & Feta">Roast Veg & Feta</option>
+          <option value="Spicy Boerewors">Spicy Boerewors</option>
+          <option value="Chicken Macon BBQ">Chicken Macon BBQ</option>
         </select>
       </div>
       <div class="form-group">
         <label for="type"> Select Classic Pizza:</label>
         <select class="form-control" id="classic">
-          <option>Peri-peri Chicken</option>
-          <option>Veg Tikka</option>
-          <option>BBQ Steak</option>
-          <option>Boerewors</option>
-          <option>Chicken Tikka</option>
-          <option>Hawaiian</option>
+          <option value="0">Select</option>
+          <option value="Peri-periChicken">Peri-peri Chicken</option>
+          <option value="Veg Tikka">Veg Tikka</option>
+          <option value="BBQS teak">BBQ Steak</option>
+          <option value="Boerewors">Boerewors</option>
+          <option value="Chicken Tikka">Chicken Tikka</option>
+          <option value="Hawaiian">Hawaiian</option>
         </select>
       </div>
       <div class="form-group">
@@ -125,6 +127,7 @@
       <div class="form-group">
         <label for="crust">Select Crust:</label>
         <select class="form-control" id="crust" required>
+          <option value="0">Select</option>
           <option value="250">Thick @ sh.250</option>
           <option value="200">Pan @ sh.200</option>
           <option value="200">Brooklyn style @ sh.200</option>
@@ -135,6 +138,7 @@
       <div class="form-group">
         <label for="topping">Select Toppings:</label>
         <select class="form-control" id="topping">
+          <option value="0">Select</option>
           <option>Sausages</option>
           <option>Mince</option>
           <option>Bacon</option>

@@ -58,6 +58,7 @@
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
+
       </div>
     </div>
 
@@ -80,27 +81,27 @@
           dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 2000);
+        dots[slideIndex - 1].className += "active";
+        setTimeout(showSlides, 3000);
       }
     </script>
 
     <div class="Services">
       <h3> Our pizzas come in two categories:</h3>
-        <p>Deluxe Pizza</p>
-        <p>Classic Pizza</p>
+      <p>Deluxe Pizza</p>
+      <p>Classic Pizza</p>
     </div>
     <form id="form1">
       <div class="form-group">
         <label for="type">Select Deluxe Pizza:</label>
         <select class="form-control" id="deluxe">
           <option value="0">Select</option>
-          <option value="Meat Deluxe">Meat Deluxe</option>
-          <option value="Chicken Hawaiian">Chicken Hawaiian</option>
-          <option value="Veg Feast">Veg Feast</option>
-          <option value="Roast Veg & Feta">Roast Veg & Feta</option>
-          <option value="Spicy Boerewors">Spicy Boerewors</option>
-          <option value="Chicken Macon BBQ">Chicken Macon BBQ</option>
+          <option value="meat Deluxe">Meat Deluxe</option>
+          <option value="chicken Hawaiian">Chicken Hawaiian</option>
+          <option value="veg Feast">Veg Feast</option>
+          <option value="roast Veg & Feta">Roast Veg & Feta</option>
+          <option value="spicy Boerewors">Spicy Boerewors</option>
+          <option value="chicken Macon BBQ">Chicken Macon BBQ</option>
         </select>
       </div>
       <div class="form-group">
@@ -136,22 +137,23 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="topping">Select Toppings:</label>
-        <select class="form-control" id="topping">
+        <label for="topping">Select Topping:</label>
+        <select class="form-control" id="topping" value="100">
           <option value="0">Select</option>
-          <option>Sausages</option>
-          <option>Mince</option>
-          <option>Bacon</option>
-          <option>Mushrooms</option>
-          <option>Mozarella Cheese</option>
-          <option>Pineapple</option>
+          <option value="100">Sausages</option>
+          <option value="100">Mince</option>
+          <option value="100">Bacon</option>
+          <option value="100">Mushrooms</option>
+          <option value="100">Mozarella Cheese</option>
+          <option value="100">Pineapple</option>
         </select>
       </div>
       <div class="form-group">
         <label for="form"> Add Quantity</label>
         <input class="form-control form-group" type="text" id="numberofpizza" required>
 
-        <button type="submit" class="btn btn-success" id="submit" value="Check-Out" onclick="calcTotalPrice()">Order</button>
+        <button type="submit" class="btn btn-success" id="submit" value="Check-Out"
+          onclick="calcTotalPrice()">Order</button>
       </div>
     </form>
     <div class="col-md-6">

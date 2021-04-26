@@ -16,29 +16,26 @@ function getToppingCost() {
   return parseInt(selectedTopping);
 }
 
-function getNumber() {
-  var selectedNumber = document.getElementById("numberofpizza").value;
-  console.log(selectedNumber)
-  return parseInt(selectedNumber);
-}
-
 function topping() {
-  var topping = 0;
-  var addTopping = document.getElementById("topping");
-  if (addTopping.select === true) {
+  var selectTopping = document.getElementById("topping").value;
+  if (selectTopping.select === true) {
     topping = 100;
   }
   return parseInt(topping)
 }
+function getNumber() {
+  var selectedNumber = document.getElementById("numberofpizza").value;
+  return parseInt(selectedNumber);
+}
 
 function calcTotalPrice(event) {
   event.preventDefault();
+}
 
 var totalPrice = (getSizeCost() + getCrustCost() + getToppingCost()) * (getNumber());
 
-console.log(getSizeCost(), getCrustCost(), getToppingCost(), getNumber());
+console.log(getSizeCost(), getCrustCost(), getToppingCost()), (getNumber());
 alert("Your order of " + getNumber() + " pizza has been received and will be processed shortly. Your total amount payable is " + totalPrice + ".")
-}
 
 $(document).ready(function () {
   $("#delivery").submit(function () {
@@ -46,6 +43,6 @@ $(document).ready(function () {
     var location = $("input#location").val();
     var number = $("input#number").val();
 
-    alert("Hello " + name + ". Your order has been received and will be delivered to " + location + " within an hour. The delivery cost is sh.300. Thank you for choosing Pizza Deli and have a delightful experience!");
+    alert("Hello " + name + " of " + number + ". Your order has been received and will be delivered to " + location + " within an hour. The delivery cost is sh.300. Thank you for choosing Pizza Deli and have a delightful experience!");
   });
 });
